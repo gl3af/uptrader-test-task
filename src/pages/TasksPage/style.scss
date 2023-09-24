@@ -1,0 +1,50 @@
+@use "../../scss/variables.scss" as *;
+
+.tasks-page {
+  width: 100%;
+
+  display: grid;
+  gap: 2rem;
+
+  &__header {
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-direction: column;
+    gap: 0.75rem;
+
+    @media screen and (min-width: $screen-md) {
+      text-align: left;
+      flex-direction: row;
+    }
+  }
+
+  &__home-link {
+    width: fit-content;
+
+    font-size: 1.25rem;
+    color: inherit;
+
+    transition: color 200ms linear;
+
+    &:hover,
+    &:focus-visible {
+      color: $orange-600;
+      outline-offset: 2px;
+    }
+  }
+
+  .tasks-board {
+    width: 100%;
+
+    display: grid;
+    gap: 2rem;
+
+    @media screen and (min-width: $screen-lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

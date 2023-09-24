@@ -1,0 +1,40 @@
+@use "../../scss/variables.scss" as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0 0 0 / 0.6);
+  z-index: 10;
+
+  width: 100dvw;
+  height: 100dvh;
+  overflow: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-inline: 1rem;
+
+  &__container {
+    width: 100%;
+    display: block;
+
+    background: $gray-900;
+    color: white;
+
+    padding: 1.5rem;
+    border-radius: 1rem;
+    transition: scale 500ms linear;
+
+    @media screen and (min-width: $screen-sm) {
+      width: 90%;
+    }
+
+    @media screen and (min-width: $screen-md) {
+      width: fit-content;
+      min-width: 50%;
+    }
+  }
+}

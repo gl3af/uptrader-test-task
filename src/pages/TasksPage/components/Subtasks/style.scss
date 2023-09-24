@@ -1,0 +1,60 @@
+@use "../../../../scss/variables.scss" as *;
+
+.subtasks {
+  display: grid;
+  gap: 1rem;
+
+  &__header {
+    display: grid;
+    gap: 0.5rem;
+
+    .header {
+      &__title {
+        font-size: 1.5rem;
+        line-height: 1;
+        font-weight: bold;
+      }
+
+      &__form {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .form__input {
+          border-bottom: 1px solid $orange-600;
+          padding: 0.25rem;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .subtask {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &__checkbox {
+      border-radius: 50%;
+      width: 1.25rem;
+      aspect-ratio: 1 / 1;
+
+      &:checked {
+        accent-color: $orange-600;
+        color: white;
+      }
+    }
+
+    &__checkbox:checked + label {
+      text-decoration: line-through;
+    }
+
+    &__label {
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../../../../scss/variables.scss" as *;
+
+.new-project-form {
+  display: grid;
+  gap: 1.5rem;
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &__group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+
+  &__submit {
+    width: 100%;
+    background-color: $orange-600;
+    color: white;
+    border-radius: 0.5rem;
+    padding-block: 0.5rem;
+  }
+}

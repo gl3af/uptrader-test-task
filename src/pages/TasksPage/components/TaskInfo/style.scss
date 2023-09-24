@@ -1,0 +1,58 @@
+.task-info {
+  display: grid;
+  gap: 1rem;
+
+  &__header {
+    display: grid;
+    gap: 0.25rem;
+
+    .header {
+      &__title {
+        font-size: 1.75rem;
+        line-height: 1;
+        font-weight: bold;
+      }
+
+      &__description {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__wrapper {
+    border: 1px solid white;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    display: grid;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-block: 0.5rem;
+    border-bottom: 1px solid gray;
+
+    &:last-child {
+      border: none;
+    }
+
+    .item {
+      font-size: 1.1rem;
+
+      &__value {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 1.125rem;
+  }
+}

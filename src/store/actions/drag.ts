@@ -1,0 +1,1 @@
+export const SET_DRAGGABLE = "SET_DRAGGABLE";

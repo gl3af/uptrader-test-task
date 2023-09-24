@@ -1,0 +1,44 @@
+@use "../../scss/variables.scss" as *;
+
+.projects-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+  gap: 2rem;
+
+  .projects-grid {
+    width: 100%;
+
+    display: grid;
+    gap: 1.5rem;
+
+    @media screen and (min-width: $screen-md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
+    }
+  }
+
+  &__add-new {
+    min-height: 5rem;
+    position: relative;
+
+    border: 1px dashed gray;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:focus-visible {
+      scale: 0.95;
+    }
+
+    svg {
+      width: 2.5rem;
+    }
+  }
+}
